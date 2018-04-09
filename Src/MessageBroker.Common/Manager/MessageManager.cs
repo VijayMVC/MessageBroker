@@ -10,7 +10,7 @@ namespace MessageBroker.Common
     /// <summary>
     /// Message manager
     /// 
-    /// (1) Provides long-polling capability without Actors
+    /// (1) Provides long-polling capability using auto reset event
     /// </summary>
     public class MessageManager : IMessageManager
     {
