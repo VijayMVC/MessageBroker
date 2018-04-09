@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[IdType]
+    FROM BIGINT NOT NULL;
+

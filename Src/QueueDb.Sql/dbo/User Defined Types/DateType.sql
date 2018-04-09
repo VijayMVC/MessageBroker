@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[DateType]
+    FROM DATETIME NULL;
+

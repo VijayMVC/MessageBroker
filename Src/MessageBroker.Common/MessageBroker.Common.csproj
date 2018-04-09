@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{096497DD-A50E-408A-9F60-ACA51F451756}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MessageBroker.Common</RootNamespace>
+    <AssemblyName>MessageBroker.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\_Packages\Autofac.4.6.2\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\_Packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Net.Http, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\_Packages\System.Net.Http.4.3.3\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\ClientConfigurationManager.cs" />
+    <Compile Include="Configuration\IMessageBrokerConfiguration.cs" />
+    <Compile Include="Configuration\MessageBrokerClientAutoFacModule.cs" />
+    <Compile Include="Configuration\MessageBrokerConfiguration.cs" />
+    <Compile Include="Configuration\MessageBrokerEnvironment.cs" />
+    <Compile Include="Contracts\InternalAgentV1.cs" />
+    <Compile Include="Contracts\InternalEnqueueMessageV1.cs" />
+    <Compile Include="Contracts\InternalHistoryV1.cs" />
+    <Compile Include="Contracts\InternalMessageV1.cs" />
+    <Compile Include="Contracts\InternalQueueConfigurationV1.cs" />
+    <Compile Include="Contracts\InternalQueueManagementV1.cs" />
+    <Compile Include="Contracts\InternalQueueStatusV1.cs" />
+    <Compile Include="Contracts\InternalScheduleV1.cs" />
+    <Compile Include="Exceptions\QueueFullException.cs" />
+    <Compile Include="Exceptions\QueueNotFound.cs" />
+    <Compile Include="Extensions\ConvertExtensions.cs" />
+    <Compile Include="Manager\IMessageManager.cs" />
+    <Compile Include="Manager\MessageManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IMessageBroker.cs" />
+    <Compile Include="Repository\IMessageBrokerAdministration.cs" />
+    <Compile Include="Repository\IMessageBrokerManagement.cs" />
+    <Compile Include="Repository\SettleType.cs" />
+    <Compile Include="RestApi\IMessageBrokerAdministrationApi.cs" />
+    <Compile Include="RestApi\IMessageBrokerAgentApi.cs" />
+    <Compile Include="RestApi\IMessageBrokerClient.cs" />
+    <Compile Include="RestApi\IMessageBrokerClientConfiguration.cs" />
+    <Compile Include="RestApi\IMessageBrokerClient_T.cs" />
+    <Compile Include="RestApi\IMessageBrokerHistoryApi.cs" />
+    <Compile Include="RestApi\IMessageBrokerManagementApi.cs" />
+    <Compile Include="RestApi\IMessageBrokerMessageApi.cs" />
+    <Compile Include="RestApi\MessageBrokerAdministrationApi.cs" />
+    <Compile Include="RestApi\MessageBrokerAgentApi.cs" />
+    <Compile Include="RestApi\MessageBrokerClient.cs" />
+    <Compile Include="RestApi\MessageBrokerClientConfiguration.cs" />
+    <Compile Include="RestApi\MessageBrokerClient_T.cs" />
+    <Compile Include="RestApi\MessageBrokerHistoryApi.cs" />
+    <Compile Include="RestApi\MessageBrokerManagementApi.cs" />
+    <Compile Include="RestApi\MessageBrokerMessageApi.cs" />
+    <Compile Include="RestApi\MessageEvent.cs" />
+    <Compile Include="RestApi\MessageEvent_T.cs" />
+    <Compile Include="RestContracts\V1\AgentContractV1.cs" />
+    <Compile Include="RestContracts\V1\EnqueuedContractV1.cs" />
+    <Compile Include="RestContracts\V1\EnqueueMessageContractV1.cs" />
+    <Compile Include="RestContracts\V1\HealthCheckContractV1.cs" />
+    <Compile Include="RestContracts\V1\HistoryContractV1.cs" />
+    <Compile Include="RestContracts\V1\HistoryDetailContractV1.cs" />
+    <Compile Include="RestContracts\V1\MessageContractV1.cs" />
+    <Compile Include="RestContracts\V1\QueueDetailContractV1.cs" />
+    <Compile Include="RestContracts\V1\QueueStatusContractV1.cs" />
+    <Compile Include="RestContracts\V1\ScheduleContractV1.cs" />
+    <Compile Include="RestContracts\V1\SetQueueContractV1.cs" />
+    <Compile Include="RestContracts\V1\SettleMessageContractV1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Toolbox\Src\Dev\Khooversoft.Net\Khooversoft.Net.csproj">
+      <Project>{4c580b5f-01b2-499f-b800-64ebaa878ac0}</Project>
+      <Name>Khooversoft.Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Toolbox\Src\Dev\Khooversoft.Sql\Khooversoft.Sql.csproj">
+      <Project>{21f7b073-2410-4251-ab78-3a0e450684bb}</Project>
+      <Name>Khooversoft.Sql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Toolbox\Src\Dev\Khooversoft.Toolbox\Khooversoft.Toolbox.csproj">
+      <Project>{7c91ae08-d47e-467b-92b1-8dd5c85ccd8d}</Project>
+      <Name>Khooversoft.Toolbox</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[CvType]
+    FROM NVARCHAR (50) NULL;
+

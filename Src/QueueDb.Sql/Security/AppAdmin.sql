@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [AppAdmin]
+    AUTHORIZATION [dbo];
+

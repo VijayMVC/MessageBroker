@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>QueueDb.Sql</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{b1d3e5c3-92b7-4f75-9fde-c4ac53cf7990}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>QueueDb.Sql</RootNamespace>
+    <AssemblyName>QueueDb.Sql</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultSchema>App</DefaultSchema>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Security" />
+    <Folder Include="App" />
+    <Folder Include="App\Stored Procedures" />
+    <Folder Include="AppAdmin" />
+    <Folder Include="AppAdmin\Stored Procedures" />
+    <Folder Include="AppDbo" />
+    <Folder Include="AppDbo\Functions" />
+    <Folder Include="AppDbo\Sequence" />
+    <Folder Include="AppDbo\Stored Procedures" />
+    <Folder Include="AppDbo\Tables" />
+    <Folder Include="AppDbo\User Defined Tables" />
+    <Folder Include="AppDbo\Views" />
+    <Folder Include="Deployment" />
+    <Folder Include="SchemaCompare" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\User Defined Types" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Security\App.sql" />
+    <Build Include="Security\AppAdmin.sql" />
+    <Build Include="Security\AppDbo.sql" />
+    <Build Include="App\Stored Procedures\Clear-Queue.sql" />
+    <Build Include="App\Stored Procedures\Create-Schedule.sql" />
+    <Build Include="App\Stored Procedures\Delete-Queue.sql" />
+    <Build Include="App\Stored Procedures\Delete-Schedule.sql" />
+    <Build Include="App\Stored Procedures\Dequeue-Message.sql" />
+    <Build Include="App\Stored Procedures\Dequeue-MessageWithLock.sql" />
+    <Build Include="App\Stored Procedures\Disable-Queue.sql" />
+    <Build Include="App\Stored Procedures\Enqueue-Message.sql" />
+    <Build Include="App\Stored Procedures\Get-History.sql" />
+    <Build Include="App\Stored Procedures\Get-Queue.sql" />
+    <Build Include="App\Stored Procedures\Get-QueueStatus.sql" />
+    <Build Include="App\Stored Procedures\List-ActiveMessages.sql" />
+    <Build Include="App\Stored Procedures\List-Agents.sql" />
+    <Build Include="App\Stored Procedures\List-Queues.sql" />
+    <Build Include="App\Stored Procedures\List-Schedules.sql" />
+    <Build Include="App\Stored Procedures\Set-Agent.sql" />
+    <Build Include="App\Stored Procedures\Set-Queue.sql" />
+    <Build Include="App\Stored Procedures\Settle-Message.sql" />
+    <Build Include="AppAdmin\Stored Procedures\Get-HistorySizeConfiguration.sql" />
+    <Build Include="AppAdmin\Stored Procedures\Reset-Database.sql" />
+    <Build Include="AppAdmin\Stored Procedures\Set-HistorySizeConfiguration.sql" />
+    <Build Include="AppDbo\Functions\Calculate-CutoffDate.sql" />
+    <Build Include="AppDbo\Sequence\MessageIdSequence.sql" />
+    <Build Include="AppDbo\Sequence\PushLoggingQueueSequence.sql" />
+    <Build Include="AppDbo\Sequence\ScheduleIdSequence.sql" />
+    <Build Include="AppDbo\Stored Procedures\Check-LastProcessedDate.sql" />
+    <Build Include="AppDbo\Stored Procedures\CopyTo-History.sql" />
+    <Build Include="AppDbo\Stored Procedures\Enforce-RetryLimits.sql" />
+    <Build Include="AppDbo\Stored Procedures\Get-QueueConfigurationSize.sql" />
+    <Build Include="AppDbo\Stored Procedures\Process-Schedules.sql" />
+    <Build Include="AppDbo\Tables\ActiveQueue.sql" />
+    <Build Include="AppDbo\Tables\AgentRegistration.sql" />
+    <Build Include="AppDbo\Tables\History.sql" />
+    <Build Include="AppDbo\Tables\QueueConfiguration.sql" />
+    <Build Include="AppDbo\Tables\QueueManagement.sql" />
+    <Build Include="AppDbo\Tables\Schedule.sql" />
+    <Build Include="AppDbo\User Defined Tables\MessageId_Table.sql" />
+    <Build Include="AppDbo\Views\ActiveQueue_View.sql" />
+    <Build Include="AppDbo\Views\AgentRegistration_View.sql" />
+    <Build Include="AppDbo\Views\History_View.sql" />
+    <Build Include="AppDbo\Views\QueueConfiguration_View.sql" />
+    <Build Include="AppDbo\Views\QueueManagement_View.sql" />
+    <Build Include="AppDbo\Views\Schedule_View.sql" />
+    <Build Include="dbo\User Defined Types\ActivityTypeType.sql" />
+    <Build Include="dbo\User Defined Types\AgentNameType.sql" />
+    <Build Include="dbo\User Defined Types\ClientMessageIdType.sql" />
+    <Build Include="dbo\User Defined Types\CvType.sql" />
+    <Build Include="dbo\User Defined Types\DateType.sql" />
+    <Build Include="dbo\User Defined Types\ErrorMessageType.sql" />
+    <Build Include="dbo\User Defined Types\FlagType.sql" />
+    <Build Include="dbo\User Defined Types\HistoryTypeType.sql" />
+    <Build Include="dbo\User Defined Types\IdType.sql" />
+    <Build Include="dbo\User Defined Types\KeyIdType.sql" />
+    <Build Include="dbo\User Defined Types\LowesMfrIdType.sql" />
+    <Build Include="dbo\User Defined Types\LowesSkuIdType.sql" />
+    <Build Include="dbo\User Defined Types\PayloadType.sql" />
+    <Build Include="dbo\User Defined Types\QtyType.sql" />
+    <Build Include="dbo\User Defined Types\QueueNameType.sql" />
+    <Build Include="dbo\User Defined Types\SizeType.sql" />
+    <Build Include="dbo\User Defined Types\SkuIdType.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Deployment\Deploy-Database.ps1" />
+    <None Include="Deployment\QueueDb.publish.xml" />
+    <None Include="Deployment\Toolbox.psm1" />
+    <None Include="SchemaCompare\SqlSchemaCompare1.scmp" />
+  </ItemGroup>
+</Project>
