@@ -18,6 +18,12 @@ namespace MessageBroker.QueueDbRepository
             _configuration = configuration;
         }
 
+        public Task<bool> HealthCheck(IWorkContext context)
+        {
+            var sql = new SqlConfiguration(_configuration.SqlConfiguration.ConnectionString);
+            return Task.FromResult(sql.TestConnection(context));
+        }
+
         public Task ClearQueue(IWorkContext context, string queueName, bool copyToHistory)
         {
             Verify.IsNotEmpty(nameof(queueName), queueName);

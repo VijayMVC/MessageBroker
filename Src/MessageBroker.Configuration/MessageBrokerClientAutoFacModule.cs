@@ -1,13 +1,9 @@
 ﻿using Autofac;
 using Khooversoft.Net;
+using MessageBroker.Common;
 using MessageBroker.Common.RestApi;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MessageBroker.Common
+namespace MessageBroker.Configuration
 {
     public class MessageBrokerClientAutoFacModule : Module
     {

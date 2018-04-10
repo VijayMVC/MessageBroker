@@ -10,7 +10,7 @@ namespace MessageBroker.Common
     {
         Test,           // Use for unit test testing
         Local,          // Local Service Fabric
-        Dark,           // Use for QA testing
+        PPE,           // Use for QA testing
         Production,     // Use for production
     }
 }

@@ -6,7 +6,7 @@ using Xunit;
 
 namespace MessageBroker.QueueDbRepository.Test
 {
-    public static class Repository
+    public static class TestAssembly
     {
         public static IMessageBrokerConfiguration Configuration { get; } = new MessageBrokerConfiguration
         {

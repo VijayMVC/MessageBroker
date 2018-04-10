@@ -53,9 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\ClientConfigurationManager.cs" />
     <Compile Include="Configuration\IMessageBrokerConfiguration.cs" />
-    <Compile Include="Configuration\MessageBrokerClientAutoFacModule.cs" />
     <Compile Include="Configuration\MessageBrokerConfiguration.cs" />
     <Compile Include="Configuration\MessageBrokerEnvironment.cs" />
     <Compile Include="Contracts\InternalAgentV1.cs" />

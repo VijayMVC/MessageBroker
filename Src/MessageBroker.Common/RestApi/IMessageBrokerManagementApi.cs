@@ -7,6 +7,8 @@ namespace MessageBroker.Common.RestApi
 {
     public interface IMessageBrokerManagementApi
     {
+        Task<RestResponse<HealthCheckContractV1>> HealthCheck(IWorkContext context);
+
         Task<RestResponse> SetQueue(IWorkContext context, SetQueueContractV1 contract);
 
         Task<RestResponse> ClearQueue(IWorkContext context, string queueName, bool copyToHistory = false);

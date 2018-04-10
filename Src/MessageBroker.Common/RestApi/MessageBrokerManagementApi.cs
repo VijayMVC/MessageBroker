@@ -19,6 +19,24 @@ namespace MessageBroker.Common.RestApi
         }
 
         /// <summary>
+        /// Get health check data (returned JSON as a string)
+        /// </summary>
+        /// <param name="context">context</param>
+        /// <returns>health check</returns>
+        public async Task<RestResponse<HealthCheckContractV1>> HealthCheck(IWorkContext context)
+        {
+            Verify.IsNotNull(nameof(context), context);
+            context = context.WithTag(_tag);
+
+            return await CreateClient()
+                .AddPath("health-check")
+                .GetAsync(context)
+                .ToRestResponseAsync(context)
+                .EnsureSuccessStatusCodeAsync(context)
+                .GetContentAsync<HealthCheckContractV1>(context);
+        }
+
+        /// <summary>
         /// Create or update queue
         /// </summary>
         /// <param name="context">context</param>

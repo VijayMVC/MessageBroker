@@ -15,9 +15,9 @@ namespace MessageBroker.QueueDbRepository.Test.Queue
         private readonly Tag _tag = new Tag(nameof(QueueTests));
         private readonly Utility _utility = new Utility();
         private readonly IWorkContext _workContext = WorkContext.Empty;
-        private readonly IMessageBrokerAdministration _admin = Repository.Administration;
-        private readonly IMessageBrokerManagement _management = Repository.Management;
-        private readonly IMessageBroker _message = Repository.Message;
+        private readonly IMessageBrokerAdministration _admin = TestAssembly.Administration;
+        private readonly IMessageBrokerManagement _management = TestAssembly.Management;
+        private readonly IMessageBroker _message = TestAssembly.Message;
         private long _writeCounter = 0;
         private long _readCount = 0;
 

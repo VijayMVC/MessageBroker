@@ -6,6 +6,8 @@ namespace MessageBroker.Common
 {
     public interface IMessageBrokerManagement
     {
+        Task<bool> HealthCheck(IWorkContext context);
+
         Task SetQueue(IWorkContext context, string queueName, int currentSizeLimit = 1000, int currentRetryLimit = 3, int lockValidForSec = 5 * 60);
 
         Task ClearQueue(IWorkContext context, string queueName, bool copyToHistory);

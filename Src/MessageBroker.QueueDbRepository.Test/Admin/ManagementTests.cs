@@ -13,8 +13,8 @@ namespace MessageBroker.QueueDbRepository.Test.Admin
     {
         private readonly Tag _tag = new Tag(nameof(AdministrationTests));
         private readonly IWorkContext _workContext = WorkContext.Empty;
-        private readonly IMessageBrokerAdministration _admin = Repository.Administration;
-        private readonly IMessageBrokerManagement _management = Repository.Management;
+        private readonly IMessageBrokerAdministration _admin = TestAssembly.Administration;
+        private readonly IMessageBrokerManagement _management = TestAssembly.Management;
 
         public ManagementTests()
         {

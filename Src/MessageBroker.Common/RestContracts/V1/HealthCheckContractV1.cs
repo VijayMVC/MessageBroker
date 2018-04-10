@@ -12,5 +12,8 @@ namespace MessageBroker.Common
     {
         [JsonProperty("status")]
         public string Status { get; set; }
+
+        [JsonProperty("repositoryHealthCheck")]
+        public string RepositoryHealthCheck { get; set; }
     }
 }

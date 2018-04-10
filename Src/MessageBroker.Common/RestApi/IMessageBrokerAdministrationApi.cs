@@ -6,8 +6,6 @@ namespace MessageBroker.Common.RestApi
 {
     public interface IMessageBrokerAdministrationApi
     {
-        Task<RestResponse<HealthCheckContractV1>> HealthCheck(IWorkContext context);
-
         Task<RestResponse> ResetDatabase(IWorkContext context);
 
         Task<RestResponse> SetHistorySizeConfiguration(IWorkContext context, int size);

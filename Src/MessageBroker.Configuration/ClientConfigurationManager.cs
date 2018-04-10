@@ -1,11 +1,9 @@
-﻿using MessageBroker.Common.RestApi;
+﻿using MessageBroker.Common;
+using MessageBroker.Common.RestApi;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MessageBroker.Common
+namespace MessageBroker.Configuration
 {
     public class ClientConfigurationManager
     {
@@ -19,7 +17,7 @@ namespace MessageBroker.Common
             {
                 BaseUri = new Uri("http://localhost:8108"),
             },
-            [MessageBrokerEnvironment.Dark] = new MessageBrokerClientConfiguration
+            [MessageBrokerEnvironment.PPE] = new MessageBrokerClientConfiguration
             {
                 BaseUri = new Uri("http://dv-3gdjs22.atgcorporate.com:8108"),
             },
