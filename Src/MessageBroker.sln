@@ -39,6 +39,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Khooversoft.Actor", "..\..\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageBroker.Api.Test", "MessageBroker.Api.Test\MessageBroker.Api.Test.csproj", "{86527EBC-A96B-45A1-95BC-882A7A8E588F}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageBrokerConsoleHost", "MessageBrokerConsoleHost\MessageBrokerConsoleHost.csproj", "{487EB8D8-A31E-4D46-814C-293CC789D3DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageBrokerTestClient", "MessageBrokerTestClient\MessageBrokerTestClient.csproj", "{46B3CDD0-66FD-4583-BC33-6A8754F4590E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -189,6 +193,22 @@ Global
 		{86527EBC-A96B-45A1-95BC-882A7A8E588F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{86527EBC-A96B-45A1-95BC-882A7A8E588F}.Release|x64.ActiveCfg = Release|Any CPU
 		{86527EBC-A96B-45A1-95BC-882A7A8E588F}.Release|x64.Build.0 = Release|Any CPU
+		{487EB8D8-A31E-4D46-814C-293CC789D3DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{487EB8D8-A31E-4D46-814C-293CC789D3DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{487EB8D8-A31E-4D46-814C-293CC789D3DB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{487EB8D8-A31E-4D46-814C-293CC789D3DB}.Debug|x64.Build.0 = Debug|Any CPU
+		{487EB8D8-A31E-4D46-814C-293CC789D3DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{487EB8D8-A31E-4D46-814C-293CC789D3DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{487EB8D8-A31E-4D46-814C-293CC789D3DB}.Release|x64.ActiveCfg = Release|Any CPU
+		{487EB8D8-A31E-4D46-814C-293CC789D3DB}.Release|x64.Build.0 = Release|Any CPU
+		{46B3CDD0-66FD-4583-BC33-6A8754F4590E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B3CDD0-66FD-4583-BC33-6A8754F4590E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B3CDD0-66FD-4583-BC33-6A8754F4590E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{46B3CDD0-66FD-4583-BC33-6A8754F4590E}.Debug|x64.Build.0 = Debug|Any CPU
+		{46B3CDD0-66FD-4583-BC33-6A8754F4590E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B3CDD0-66FD-4583-BC33-6A8754F4590E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46B3CDD0-66FD-4583-BC33-6A8754F4590E}.Release|x64.ActiveCfg = Release|Any CPU
+		{46B3CDD0-66FD-4583-BC33-6A8754F4590E}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

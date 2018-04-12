@@ -145,5 +145,6 @@
     <None Include="Deployment\QueueDb.publish.xml" />
     <None Include="Deployment\Toolbox.psm1" />
     <None Include="SchemaCompare\SqlSchemaCompare1.scmp" />
+    <None Include="Deployment\MessageBrokerQueue.publish.xml" />
   </ItemGroup>
 </Project>
